@@ -967,6 +967,175 @@
     .metrics-grid { grid-template-columns: 1fr; }
     .hero-pills { flex-direction: column; align-items: flex-start; }
   }
+
+  /* ── ESTRATEGIA (casos) ── */
+  #estrategia { padding-top: 40px; }
+  .est-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 8px;
+  }
+  .est-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--bord);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .est-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 44px -12px rgba(140,30,55,0.25);
+  }
+  .est-card.light { background: var(--surf); color: var(--txt); }
+  .est-card.dark { background: #f5379f; color: #fff; border: none; }
+  .est-visual {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .est-v1 { background: #123526; }
+  .est-v2 { background: #f5f1ea; }
+  .est-v3 { background: #f4a300; }
+  .est-logo {
+    height: 58%;
+    width: auto;
+    max-width: 58%;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  }
+  .est-logo.no-box { box-shadow: none; border-radius: 0; max-width: 70%; }
+  .est-corner {
+    position: absolute;
+    max-width: 38%;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    color: rgba(245,241,234,0.85);
+  }
+  .est-v3 .est-corner { color: rgba(31,31,31,0.85); }
+  .est-corner.tl { top: 14px; left: 16px; }
+  .est-corner.tr { top: 14px; right: 16px; text-align: right; }
+  .est-corner.bl { bottom: 14px; left: 16px; }
+  .est-corner.br { bottom: 14px; right: 16px; text-align: right; }
+  .est-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 24px 26px 28px;
+    flex: 1;
+  }
+  .est-num {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    color: var(--acc);
+  }
+  .est-card.dark .est-num { color: #fff; }
+  .est-name { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+  .est-headline { font-size: 15px; font-weight: 500; line-height: 1.4; }
+  .est-result { font-size: 13px; line-height: 1.6; color: var(--muted); flex: 1; }
+  .est-card.dark .est-result { color: rgba(255,255,255,0.92); }
+  .est-btn {
+    align-self: flex-start;
+    margin-top: 14px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid var(--acc);
+    background: transparent;
+    color: var(--acc);
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+  .est-btn:hover { background: var(--acc); color: #fff; }
+  .est-card.dark .est-btn { border-color: #fff; color: #fff; }
+  .est-card.dark .est-btn:hover { background: #fff; color: #f5379f; }
+
+  /* caso completo */
+  .est-head { padding: 44px 36px 32px; background: #141414; color: #f5f1ea; }
+  .est-head .modal-eyebrow { color: #d4607c; }
+  .est-head .modal-title { color: #f5f1ea; }
+  .est-p { font-size: 14px; line-height: 1.75; color: var(--txt); margin-bottom: 14px; max-width: 720px; }
+  .est-p em { color: var(--acc); font-style: italic; }
+  .est-steps { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 4px 0 14px; }
+  .est-step {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: var(--chip);
+    border: 1px solid var(--bord);
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .est-arrow { color: var(--acc); font-size: 16px; }
+  .est-timeline {
+    display: flex;
+    overflow-x: auto;
+    padding: 4px 0 8px;
+    margin-top: 8px;
+  }
+  .est-phase {
+    position: relative;
+    flex: 1 0 120px;
+    min-width: 120px;
+    padding: 26px 10px 0 0;
+  }
+  .est-phase::before {
+    content: '';
+    position: absolute;
+    top: 6px; left: 0; right: 0;
+    height: 1px;
+    background: var(--bord-str);
+  }
+  .est-phase::after {
+    content: '';
+    position: absolute;
+    top: 1px; left: 0;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--acc);
+  }
+  .est-phase-n { display: block; font-size: 11px; font-weight: 500; letter-spacing: 0.12em; color: var(--acc); margin-bottom: 4px; }
+  .est-phase-t { font-size: 13px; font-weight: 500; line-height: 1.35; }
+  .est-results { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 12px 0 18px; }
+  .est-res {
+    background: var(--chip);
+    border: 1px solid var(--bord);
+    border-radius: 16px;
+    padding: 22px 18px;
+  }
+  .est-res-val { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; color: var(--acc); }
+  .est-res-val.sm { font-size: 1.15rem; letter-spacing: -0.01em; }
+  .est-res-lbl { margin-top: 8px; font-size: 12px; line-height: 1.5; color: var(--muted); }
+  .est-closing { font-size: 16px; font-weight: 500; color: var(--acc); margin: 8px 0 20px; }
+  .est-link {
+    display: inline-block;
+    padding: 12px 26px;
+    border-radius: 999px;
+    background: var(--acc);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .est-link:hover { opacity: 0.85; }
+  @media (max-width: 900px) {
+    .est-grid { grid-template-columns: 1fr; }
+    .est-head { padding: 44px 24px 28px; }
+  }
 </style>
 </head>
 <body>
@@ -1011,6 +1180,59 @@
       <span>📍 Donostia, España</span>
       <span>✉ gabrielacontrerasredes@gmail.com</span>
     </div>
+  </div>
+</section>
+
+<!-- ESTRATEGIA -->
+<section id="estrategia">
+  <div class="divider">
+    <span class="divider-label">Estrategia</span>
+    <span class="divider-line"></span>
+  </div>
+  <div style="padding-top:40px;">
+    <h2 class="section-h2"><span class="accent">Estrategia</span>.</h2>
+  </div>
+  <div class="est-grid">
+
+    <article class="est-card light">
+      <div class="est-visual est-v1">
+        <img class="est-logo" src="logos/fiori.jpeg" alt="Fiori di Rossi" />
+      </div>
+      <div class="est-info">
+        <span class="est-num">01</span>
+        <h3 class="est-name">Fiori di Rossi</h3>
+        <p class="est-headline">Hacer crecer lo que ya estaba floreciendo.</p>
+        <p class="est-result">22 mil → 82 mil visualizaciones en 30 días, sin publicidad.</p>
+        <button class="est-btn" onclick="openModal('est1')">Ver caso</button>
+      </div>
+    </article>
+
+    <article class="est-card dark">
+      <div class="est-visual est-v2">
+        <img class="est-logo no-box" src="logos/LOGO-OFICIAL-STELLA-PINK.png" alt="Stella Murzi" />
+      </div>
+      <div class="est-info">
+        <span class="est-num">02</span>
+        <h3 class="est-name">Stella Murzi</h3>
+        <p class="est-headline">No había que inventarla. Había que darle un hogar.</p>
+        <p class="est-result">4.940 → 12.500 seguidores en menos de cuatro meses, sin publicidad.</p>
+        <button class="est-btn" onclick="openModal('est2')">Ver caso</button>
+      </div>
+    </article>
+
+    <article class="est-card light">
+      <div class="est-visual est-v3">
+        <img class="est-logo" src="logos/RGB_Imagotipo%20-%20Versi%C3%B3n%202.jpg" alt="Komagocho" />
+      </div>
+      <div class="est-info">
+        <span class="est-num">03</span>
+        <h3 class="est-name">Komagocho</h3>
+        <p class="est-headline">Del Táchira a Carolina del Norte, sin perder el acento.</p>
+        <p class="est-result">Proyecto en curso</p>
+        <button class="est-btn" onclick="openModal('est3')">Ver caso</button>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -1730,6 +1952,114 @@
     </div>
   </div>
 </div>
+
+<!-- MODAL: ESTRATEGIA 01 FIORI DI ROSSI -->
+<div class="modal-overlay" id="modal-est1">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('est1')" aria-label="Cerrar">✕</button>
+    <div class="est-head">
+      <p class="modal-eyebrow">Floristería · San Cristóbal, Venezuela</p>
+      <h2 class="modal-title">Fiori di Rossi</h2>
+    </div>
+    <div class="modal-body">
+      <p class="est-p">Rossi lleva seis años creando arreglos con un estilo que se reconoce en cuanto lo ves. Su trabajo ya enamoraba a quien lo conocía. Lo que faltaba era que más personas llegaran a él y, al llegar, supieran quién estaba detrás.</p>
+      <p class="est-p">No hacía falta reinventar la marca, sino darle rumbo. Empecé por escuchar lo que ya estaba pasando: qué contenidos conectaban, qué flores se pedían, qué hacía única a Rossi. A partir de ahí construimos una voz, una forma de contar y un plan de Reels con ella como protagonista: sus manos trabajando, su historia, el detalle detrás de cada arreglo.</p>
+      <p class="est-p">En un mes, la marca empezó a llegar mucho más lejos:</p>
+      <div class="est-results">
+        <div class="est-res"><div class="est-res-val">82 mil</div><div class="est-res-lbl">visualizaciones (antes, 22 mil)</div></div>
+        <div class="est-res"><div class="est-res-val sm">Más de la mitad</div><div class="est-res-lbl">personas que aún no la seguían</div></div>
+        <div class="est-res"><div class="est-res-val">15 mil</div><div class="est-res-lbl">visualizaciones en un solo Reel</div></div>
+        <div class="est-res"><div class="est-res-val sm">Sin un euro en publicidad</div></div>
+      </div>
+      <p class="est-closing">Una marca con alma, ahora con rumbo.</p>
+      <a class="est-link" href="https://www.instagram.com/fioridirossi/" target="_blank" rel="noopener">Ver en Instagram →</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: ESTRATEGIA 02 STELLA MURZI -->
+<div class="modal-overlay" id="modal-est2">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('est2')" aria-label="Cerrar">✕</button>
+    <div class="est-head">
+      <p class="modal-eyebrow">Marca personal · Fisioterapia, maternidad y bienestar</p>
+      <h2 class="modal-title">Stella Murzi</h2>
+    </div>
+    <div class="modal-body">
+      <p class="est-p">Stella ya tenía lo que no se puede fabricar: naturalidad frente a la cámara, empatía y una forma de contar la maternidad en la que muchas mujeres se reconocían. Lo que faltaba era un orden. Fisioterapeuta, mamá, mentalidad, recetas y vida cotidiana convivían en su perfil al mismo volumen, y quien llegaba no sabía bien por qué quedarse.</p>
+      <p class="est-p">No quitamos nada de lo que ella es. Le dimos a cada parte su lugar: la maternidad real como punto de encuentro, la fisioterapia como su voz experta, el bienestar como acompañamiento.</p>
+
+      <div class="modal-section" style="margin-top:28px;">
+        <p class="modal-section-label">Cómo lo hicimos</p>
+        <div class="est-steps">
+          <span class="est-step">Datos</span><span class="est-arrow">→</span>
+          <span class="est-step">Diagnóstico</span><span class="est-arrow">→</span>
+          <span class="est-step">Decisión</span><span class="est-arrow">→</span>
+          <span class="est-step">Contenido</span><span class="est-arrow">→</span>
+          <span class="est-step">Medición</span><span class="est-arrow">→</span>
+          <span class="est-step">Ajuste</span>
+        </div>
+        <p class="est-p">La estrategia no termina en una presentación. Cada decisión se convierte en una herramienta: qué publicar, cómo abrir un Reel, cuándo vender, qué estética usar, qué no hacer y cómo mantener la coherencia.</p>
+        <div class="est-timeline">
+          <div class="est-phase"><span class="est-phase-n">01</span><span class="est-phase-t">Descubrimiento</span></div>
+          <div class="est-phase"><span class="est-phase-n">02</span><span class="est-phase-t">Auditoría</span></div>
+          <div class="est-phase"><span class="est-phase-n">03</span><span class="est-phase-t">Estrategia de marca</span></div>
+          <div class="est-phase"><span class="est-phase-n">04</span><span class="est-phase-t">Arquitectura de contenido</span></div>
+          <div class="est-phase"><span class="est-phase-n">05</span><span class="est-phase-t">Identidad visual</span></div>
+          <div class="est-phase"><span class="est-phase-n">06</span><span class="est-phase-t">Monetización y oferta</span></div>
+          <div class="est-phase"><span class="est-phase-n">07</span><span class="est-phase-t">Operación asistida por IA</span></div>
+          <div class="est-phase"><span class="est-phase-n">08</span><span class="est-phase-t">Medición y siguiente ciclo</span></div>
+        </div>
+      </div>
+
+      <p class="est-p">Cuatro meses después, su comunidad había crecido así:</p>
+      <div class="est-results">
+        <div class="est-res"><div class="est-res-val">4.940 → 12.500</div><div class="est-res-lbl">seguidores</div></div>
+        <div class="est-res"><div class="est-res-val sm">Más del doble en menos de cuatro meses.</div></div>
+        <div class="est-res"><div class="est-res-val sm">Stella no pagó ni un anuncio: todo el crecimiento fue orgánico.</div></div>
+      </div>
+      <p class="est-closing">Una marca que ya era querida, ahora con un lugar propio.</p>
+      <a class="est-link" href="https://www.instagram.com/fisiostellamurzi/" target="_blank" rel="noopener">Ver en Instagram →</a>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: ESTRATEGIA 03 KOMAGOCHO -->
+<div class="modal-overlay" id="modal-est3">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal('est3')" aria-label="Cerrar">✕</button>
+    <div class="est-head">
+      <p class="modal-eyebrow">Comida de los Andes venezolanos · Cary, Carolina del Norte, EE. UU. · Proyecto en curso</p>
+      <h2 class="modal-title">Komagocho</h2>
+    </div>
+    <div class="modal-body">
+      <p class="est-p">Komagocho lleva el sabor de los Andes venezolanos a un público que nunca había probado un pastelito andino. El reto no era solo que lo encontraran, sino que se animaran a probar algo que no conocían.</p>
+      <p class="est-p">Por eso empezamos por lo familiar. El público americano ya conocía la empanada, así que la usamos como puente: <em>"If you like empanadas, you'll love the pastelito andino."</em> A partir de ahí le dimos a la marca una voz cálida y bilingüe, contamos su historia y convertimos al pastelito en lo que es: el corazón del Táchira.</p>
+      <p class="est-p">Y le dimos un rostro. El oso frontino, símbolo de los Andes, se convirtió en Tachi, la mascota que acompaña a la marca en el menú y en la web.</p>
+
+      <div class="modal-section" style="margin-top:28px;">
+        <p class="modal-section-label">Un ecosistema, no piezas sueltas</p>
+        <p class="est-p">Nos pidieron una web y construimos un sistema: una sola historia que vive en cada punto de contacto, y cada canal con su propia función. La web explica y enamora, el tráiler ayuda a decidir rápido y Google la pone en el mapa.</p>
+      </div>
+
+      <div class="modal-section">
+        <div class="est-timeline">
+          <div class="est-phase"><span class="est-phase-n">01</span><span class="est-phase-t">Dirección estratégica</span></div>
+          <div class="est-phase"><span class="est-phase-n">02</span><span class="est-phase-t">Menú maestro</span></div>
+          <div class="est-phase"><span class="est-phase-n">03</span><span class="est-phase-t">Arquitectura web</span></div>
+          <div class="est-phase"><span class="est-phase-n">04</span><span class="est-phase-t">Sistema visual</span></div>
+          <div class="est-phase"><span class="est-phase-n">05</span><span class="est-phase-t">Piezas por canal</span></div>
+          <div class="est-phase"><span class="est-phase-n">06</span><span class="est-phase-t">Web, Google y búsquedas con IA</span></div>
+        </div>
+      </div>
+
+      <p class="est-p">Una sola voz, una sola imagen y una forma fácil de encontrarlos y de pedir.</p>
+      <p class="est-closing">Una marca con raíces, ahora con un lugar en un país nuevo.</p>
+      <a class="est-link" href="https://www.instagram.com/komagocho/" target="_blank" rel="noopener">Ver en Instagram →</a>
+    </div>
+  </div>
+</div>
+
 
 <script>
   const btn = document.getElementById('modeBtn');
